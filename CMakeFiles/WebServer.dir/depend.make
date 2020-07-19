@@ -19,6 +19,7 @@ CMakeFiles/WebServer.dir/Channel.o: EventLoop.h
 CMakeFiles/WebServer.dir/Channel.o: HttpData.h
 CMakeFiles/WebServer.dir/Channel.o: LogStream.h
 CMakeFiles/WebServer.dir/Channel.o: Logging.h
+CMakeFiles/WebServer.dir/Channel.o: PhraseJson.h
 CMakeFiles/WebServer.dir/Channel.o: Thread.h
 CMakeFiles/WebServer.dir/Channel.o: Timer.h
 CMakeFiles/WebServer.dir/Channel.o: Util.h
@@ -34,6 +35,7 @@ CMakeFiles/WebServer.dir/Epoll.o: Epoll.h
 CMakeFiles/WebServer.dir/Epoll.o: HttpData.h
 CMakeFiles/WebServer.dir/Epoll.o: LogStream.h
 CMakeFiles/WebServer.dir/Epoll.o: Logging.h
+CMakeFiles/WebServer.dir/Epoll.o: PhraseJson.h
 CMakeFiles/WebServer.dir/Epoll.o: Timer.h
 CMakeFiles/WebServer.dir/Epoll.o: Util.h
 CMakeFiles/WebServer.dir/Epoll.o: noncopyable.h
@@ -47,6 +49,7 @@ CMakeFiles/WebServer.dir/EventLoop.o: EventLoop.h
 CMakeFiles/WebServer.dir/EventLoop.o: HttpData.h
 CMakeFiles/WebServer.dir/EventLoop.o: LogStream.h
 CMakeFiles/WebServer.dir/EventLoop.o: Logging.h
+CMakeFiles/WebServer.dir/EventLoop.o: PhraseJson.h
 CMakeFiles/WebServer.dir/EventLoop.o: Thread.h
 CMakeFiles/WebServer.dir/EventLoop.o: Timer.h
 CMakeFiles/WebServer.dir/EventLoop.o: Util.h
@@ -62,6 +65,7 @@ CMakeFiles/WebServer.dir/EventLoopThread.o: EventLoopThread.h
 CMakeFiles/WebServer.dir/EventLoopThread.o: HttpData.h
 CMakeFiles/WebServer.dir/EventLoopThread.o: LogStream.h
 CMakeFiles/WebServer.dir/EventLoopThread.o: Logging.h
+CMakeFiles/WebServer.dir/EventLoopThread.o: PhraseJson.h
 CMakeFiles/WebServer.dir/EventLoopThread.o: Thread.h
 CMakeFiles/WebServer.dir/EventLoopThread.o: Timer.h
 CMakeFiles/WebServer.dir/EventLoopThread.o: Util.h
@@ -78,6 +82,7 @@ CMakeFiles/WebServer.dir/EventLoopThreadPool.o: EventLoopThreadPool.h
 CMakeFiles/WebServer.dir/EventLoopThreadPool.o: HttpData.h
 CMakeFiles/WebServer.dir/EventLoopThreadPool.o: LogStream.h
 CMakeFiles/WebServer.dir/EventLoopThreadPool.o: Logging.h
+CMakeFiles/WebServer.dir/EventLoopThreadPool.o: PhraseJson.h
 CMakeFiles/WebServer.dir/EventLoopThreadPool.o: Thread.h
 CMakeFiles/WebServer.dir/EventLoopThreadPool.o: Timer.h
 CMakeFiles/WebServer.dir/EventLoopThreadPool.o: Util.h
@@ -96,6 +101,7 @@ CMakeFiles/WebServer.dir/HttpData.o: HttpData.cpp
 CMakeFiles/WebServer.dir/HttpData.o: HttpData.h
 CMakeFiles/WebServer.dir/HttpData.o: LogStream.h
 CMakeFiles/WebServer.dir/HttpData.o: Logging.h
+CMakeFiles/WebServer.dir/HttpData.o: PhraseJson.h
 CMakeFiles/WebServer.dir/HttpData.o: Thread.h
 CMakeFiles/WebServer.dir/HttpData.o: Timer.h
 CMakeFiles/WebServer.dir/HttpData.o: Util.h
@@ -130,11 +136,15 @@ CMakeFiles/WebServer.dir/Main.o: HttpData.h
 CMakeFiles/WebServer.dir/Main.o: LogStream.h
 CMakeFiles/WebServer.dir/Main.o: Logging.h
 CMakeFiles/WebServer.dir/Main.o: Main.cpp
+CMakeFiles/WebServer.dir/Main.o: PhraseJson.h
 CMakeFiles/WebServer.dir/Main.o: Server.h
 CMakeFiles/WebServer.dir/Main.o: Thread.h
 CMakeFiles/WebServer.dir/Main.o: Timer.h
 CMakeFiles/WebServer.dir/Main.o: Util.h
 CMakeFiles/WebServer.dir/Main.o: noncopyable.h
+
+CMakeFiles/WebServer.dir/PhraseJson.o: PhraseJson.cc
+CMakeFiles/WebServer.dir/PhraseJson.o: PhraseJson.h
 
 CMakeFiles/WebServer.dir/Server.o: Channel.h
 CMakeFiles/WebServer.dir/Server.o: CountDownLatch.h
@@ -146,6 +156,7 @@ CMakeFiles/WebServer.dir/Server.o: EventLoopThreadPool.h
 CMakeFiles/WebServer.dir/Server.o: HttpData.h
 CMakeFiles/WebServer.dir/Server.o: LogStream.h
 CMakeFiles/WebServer.dir/Server.o: Logging.h
+CMakeFiles/WebServer.dir/Server.o: PhraseJson.h
 CMakeFiles/WebServer.dir/Server.o: Server.cpp
 CMakeFiles/WebServer.dir/Server.o: Server.h
 CMakeFiles/WebServer.dir/Server.o: Thread.h
@@ -160,6 +171,7 @@ CMakeFiles/WebServer.dir/Thread.o: Thread.h
 CMakeFiles/WebServer.dir/Thread.o: noncopyable.h
 
 CMakeFiles/WebServer.dir/Timer.o: HttpData.h
+CMakeFiles/WebServer.dir/Timer.o: PhraseJson.h
 CMakeFiles/WebServer.dir/Timer.o: Timer.cpp
 CMakeFiles/WebServer.dir/Timer.o: Timer.h
 CMakeFiles/WebServer.dir/Timer.o: noncopyable.h

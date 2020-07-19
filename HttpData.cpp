@@ -727,19 +727,21 @@ void HttpData::handleRead()
     if (state_ == STATE_RECV_BODY)
     {
       int content_length = -1;
-      if (headers_.find("Content-length") != headers_.end())
+      if (headers_.find("Content-Length") != headers_.end())
       {
-        content_length = stoi(headers_["Content-length"]);
+        content_length = stoi(headers_["Content-Length"]);
+        bodys_ = inBuffer_.substr(0,content_length);
+        inBuffer_ = inBuffer_.substr(content_length-1);
       }
       else
       {
         // cout << "(state_ == STATE_RECV_BODY)" << endl;
         error_ = true;
-        handleError(fd_, 400, "Bad Request: Lack of argument (Content-length)");
+        handleError(fd_, 400, "Bad Request: Lack of argument (Content-Length)");
         break;
       }
-      if (static_cast<int>(inBuffer_.size()) < content_length)
-        break;
+      //if (static_cast<int>(inBuffer_.size()) < content_length)
+      //  break;
       state_ = STATE_ANALYSIS;
     }
     if (state_ == STATE_ANALYSIS)
@@ -1055,30 +1057,66 @@ AnalysisState HttpData::analysisRequest()
 {
   if (method_ == METHOD_POST)
   {
-    // ------------------------------------------------------
-    // My CV stitching handler which requires OpenCV library
-    // ------------------------------------------------------
-    // string header;
-    // header += string("HTTP/1.1 200 OK\r\n");
-    // if(headers_.find("Connection") != headers_.end() &&
-    // headers_["Connection"] == "Keep-Alive")
-    // {
-    //     keepAlive_ = true;
-    //     header += string("Connection: Keep-Alive\r\n") + "Keep-Alive:
-    //     timeout=" + to_string(DEFAULT_KEEP_ALIVE_TIME) + "\r\n";
-    // }
-    // int length = stoi(headers_["Content-length"]);
-    // vector<char> data(inBuffer_.begin(), inBuffer_.begin() + length);
-    // Mat src = imdecode(data, CV_LOAD_IMAGE_ANYDEPTH|CV_LOAD_IMAGE_ANYCOLOR);
-    // //imwrite("receive.bmp", src);
-    // Mat res = stitch(src);
-    // vector<uchar> data_encode;
-    // imencode(".png", res, data_encode);
-    // header += string("Content-length: ") + to_string(data_encode.size()) +
-    // "\r\n\r\n";
-    // outBuffer_ += header + string(data_encode.begin(), data_encode.end());
-    // inBuffer_ = inBuffer_.substr(length);
-    // return ANALYSIS_SUCCESS;
+    string header;
+    header += "HTTP/1.1 200 OK\r\n";
+    if (headers_.find("Connection") != headers_.end() &&
+        (headers_["Connection"] == "Keep-Alive" ||
+         headers_["Connection"] == "keep-alive"))
+    {
+      keepAlive_ = true;
+      header += string("Connection: Keep-Alive\r\n") + "Keep-Alive: timeout=" +
+                to_string(DEFAULT_KEEP_ALIVE_TIME) + "\r\n";
+    }
+    int dot_pos = fileName_.find('.');
+    string filetype;
+    if (dot_pos < 0)
+      filetype = MimeType::getMime("default");
+    else
+      filetype = MimeType::getMime(fileName_.substr(dot_pos));
+
+    if (fileName_ == "favicon.ico")
+    {
+      header += "Content-Type: image/png\r\n";
+      header += "Content-Length: " + to_string(sizeof favicon) + "\r\n";
+      header += "Server: hyp's Web Server\r\n";
+      header += "\r\n";
+
+      outBuffer_ += header;
+      outBuffer_ += string(favicon, favicon + sizeof favicon);
+      return ANALYSIS_SUCCESS;
+    }
+    if (fileName_ == "test")
+    {
+      Document d;
+	    d.Parse(bodys_.c_str());
+      std::string form = d["form"].GetString();
+
+      std::string body = PhraseJson(form);
+      header += "Content-Type: text/" + form + "\r\n";
+      header += "Content-Length: " + to_string(body.length()) + "\r\n";
+      header += "Server: hyp's Web Server\r\n";
+      header += "\r\n";
+
+      outBuffer_ += header;
+      outBuffer_ += body;
+      return ANALYSIS_SUCCESS;
+    }
+
+    struct stat sbuf;
+    if (stat(fileName_.c_str(), &sbuf) < 0)
+    {
+      header.clear();
+      handleError(fd_, 404, "Not Found!");
+      return ANALYSIS_ERROR;
+    }
+    header += "Server: hyp's Web Server\r\n";
+    header += "Content-Type: " + filetype + "\r\n";
+    header += "Content-Length: " + to_string(sbuf.st_size) + "\r\n";
+    
+    // 头部结束
+    header += "\r\n";
+    outBuffer_ += header;
+    return ANALYSIS_SUCCESS;
   }
   else if (method_ == METHOD_GET || method_ == METHOD_HEAD)
   {
@@ -1099,13 +1137,7 @@ AnalysisState HttpData::analysisRequest()
     else
       filetype = MimeType::getMime(fileName_.substr(dot_pos));
 
-    // echo test
-    if (fileName_ == "hello")
-    {
-      outBuffer_ =
-          "HTTP/1.1 200 OK\r\nContent-type: text/plain\r\n\r\nHello World";
-      return ANALYSIS_SUCCESS;
-    }
+
     if (fileName_ == "favicon.ico")
     {
       header += "Content-Type: image/png\r\n";
@@ -1128,7 +1160,7 @@ AnalysisState HttpData::analysisRequest()
     }
     header += "Content-Type: " + filetype + "\r\n";
     header += "Content-Length: " + to_string(sbuf.st_size) + "\r\n";
-    header += "Server: LinYa's Web Server\r\n";
+    header += "Server: hyp's Web Server\r\n";
     // 头部结束
     header += "\r\n";
     outBuffer_ += header;
@@ -1169,13 +1201,13 @@ void HttpData::handleError(int fd, int err_num, string short_msg)
   body_buff += "<html><title>哎~出错了</title>";
   body_buff += "<body bgcolor=\"ffffff\">";
   body_buff += to_string(err_num) + short_msg;
-  body_buff += "<hr><em> LinYa's Web Server</em>\n</body></html>";
+  body_buff += "<hr><em> hyp's Web Server</em>\n</body></html>";
 
   header_buff += "HTTP/1.1 " + to_string(err_num) + short_msg + "\r\n";
   header_buff += "Content-Type: text/html\r\n";
   header_buff += "Connection: Close\r\n";
   header_buff += "Content-Length: " + to_string(body_buff.size()) + "\r\n";
-  header_buff += "Server: LinYa's Web Server\r\n";
+  header_buff += "Server: hyp's Web Server\r\n";
   ;
   header_buff += "\r\n";
   // 错误处理不考虑writen不完的情况

@@ -369,9 +369,33 @@ CMakeFiles/WebServer.dir/Main.o.provides: CMakeFiles/WebServer.dir/Main.o.requir
 CMakeFiles/WebServer.dir/Main.o.provides.build: CMakeFiles/WebServer.dir/Main.o
 
 
+CMakeFiles/WebServer.dir/PhraseJson.o: CMakeFiles/WebServer.dir/flags.make
+CMakeFiles/WebServer.dir/PhraseJson.o: PhraseJson.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/WebServer.dir/PhraseJson.o"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WebServer.dir/PhraseJson.o -c /home/hyp/demo/hyp/WebServer/PhraseJson.cc
+
+CMakeFiles/WebServer.dir/PhraseJson.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WebServer.dir/PhraseJson.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hyp/demo/hyp/WebServer/PhraseJson.cc > CMakeFiles/WebServer.dir/PhraseJson.i
+
+CMakeFiles/WebServer.dir/PhraseJson.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WebServer.dir/PhraseJson.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hyp/demo/hyp/WebServer/PhraseJson.cc -o CMakeFiles/WebServer.dir/PhraseJson.s
+
+CMakeFiles/WebServer.dir/PhraseJson.o.requires:
+
+.PHONY : CMakeFiles/WebServer.dir/PhraseJson.o.requires
+
+CMakeFiles/WebServer.dir/PhraseJson.o.provides: CMakeFiles/WebServer.dir/PhraseJson.o.requires
+	$(MAKE) -f CMakeFiles/WebServer.dir/build.make CMakeFiles/WebServer.dir/PhraseJson.o.provides.build
+.PHONY : CMakeFiles/WebServer.dir/PhraseJson.o.provides
+
+CMakeFiles/WebServer.dir/PhraseJson.o.provides.build: CMakeFiles/WebServer.dir/PhraseJson.o
+
+
 CMakeFiles/WebServer.dir/Server.o: CMakeFiles/WebServer.dir/flags.make
 CMakeFiles/WebServer.dir/Server.o: Server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/WebServer.dir/Server.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/WebServer.dir/Server.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WebServer.dir/Server.o -c /home/hyp/demo/hyp/WebServer/Server.cpp
 
 CMakeFiles/WebServer.dir/Server.i: cmake_force
@@ -395,7 +419,7 @@ CMakeFiles/WebServer.dir/Server.o.provides.build: CMakeFiles/WebServer.dir/Serve
 
 CMakeFiles/WebServer.dir/Thread.o: CMakeFiles/WebServer.dir/flags.make
 CMakeFiles/WebServer.dir/Thread.o: Thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/WebServer.dir/Thread.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/WebServer.dir/Thread.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WebServer.dir/Thread.o -c /home/hyp/demo/hyp/WebServer/Thread.cpp
 
 CMakeFiles/WebServer.dir/Thread.i: cmake_force
@@ -419,7 +443,7 @@ CMakeFiles/WebServer.dir/Thread.o.provides.build: CMakeFiles/WebServer.dir/Threa
 
 CMakeFiles/WebServer.dir/Timer.o: CMakeFiles/WebServer.dir/flags.make
 CMakeFiles/WebServer.dir/Timer.o: Timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/WebServer.dir/Timer.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/WebServer.dir/Timer.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WebServer.dir/Timer.o -c /home/hyp/demo/hyp/WebServer/Timer.cpp
 
 CMakeFiles/WebServer.dir/Timer.i: cmake_force
@@ -443,7 +467,7 @@ CMakeFiles/WebServer.dir/Timer.o.provides.build: CMakeFiles/WebServer.dir/Timer.
 
 CMakeFiles/WebServer.dir/Util.o: CMakeFiles/WebServer.dir/flags.make
 CMakeFiles/WebServer.dir/Util.o: Util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/WebServer.dir/Util.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/WebServer.dir/Util.o"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WebServer.dir/Util.o -c /home/hyp/demo/hyp/WebServer/Util.cpp
 
 CMakeFiles/WebServer.dir/Util.i: cmake_force
@@ -480,6 +504,7 @@ WebServer_OBJECTS = \
 "CMakeFiles/WebServer.dir/LogStream.o" \
 "CMakeFiles/WebServer.dir/Logging.o" \
 "CMakeFiles/WebServer.dir/Main.o" \
+"CMakeFiles/WebServer.dir/PhraseJson.o" \
 "CMakeFiles/WebServer.dir/Server.o" \
 "CMakeFiles/WebServer.dir/Thread.o" \
 "CMakeFiles/WebServer.dir/Timer.o" \
@@ -501,13 +526,14 @@ WebServer: CMakeFiles/WebServer.dir/LogFile.o
 WebServer: CMakeFiles/WebServer.dir/LogStream.o
 WebServer: CMakeFiles/WebServer.dir/Logging.o
 WebServer: CMakeFiles/WebServer.dir/Main.o
+WebServer: CMakeFiles/WebServer.dir/PhraseJson.o
 WebServer: CMakeFiles/WebServer.dir/Server.o
 WebServer: CMakeFiles/WebServer.dir/Thread.o
 WebServer: CMakeFiles/WebServer.dir/Timer.o
 WebServer: CMakeFiles/WebServer.dir/Util.o
 WebServer: CMakeFiles/WebServer.dir/build.make
 WebServer: CMakeFiles/WebServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable WebServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable WebServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WebServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -528,6 +554,7 @@ CMakeFiles/WebServer.dir/requires: CMakeFiles/WebServer.dir/LogFile.o.requires
 CMakeFiles/WebServer.dir/requires: CMakeFiles/WebServer.dir/LogStream.o.requires
 CMakeFiles/WebServer.dir/requires: CMakeFiles/WebServer.dir/Logging.o.requires
 CMakeFiles/WebServer.dir/requires: CMakeFiles/WebServer.dir/Main.o.requires
+CMakeFiles/WebServer.dir/requires: CMakeFiles/WebServer.dir/PhraseJson.o.requires
 CMakeFiles/WebServer.dir/requires: CMakeFiles/WebServer.dir/Server.o.requires
 CMakeFiles/WebServer.dir/requires: CMakeFiles/WebServer.dir/Thread.o.requires
 CMakeFiles/WebServer.dir/requires: CMakeFiles/WebServer.dir/Timer.o.requires

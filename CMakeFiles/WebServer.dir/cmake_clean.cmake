@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/WebServer.dir/LogStream.o"
   "CMakeFiles/WebServer.dir/Logging.o"
   "CMakeFiles/WebServer.dir/Main.o"
+  "CMakeFiles/WebServer.dir/PhraseJson.o"
   "CMakeFiles/WebServer.dir/Server.o"
   "CMakeFiles/WebServer.dir/Thread.o"
   "CMakeFiles/WebServer.dir/Timer.o"
