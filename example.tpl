@@ -1,0 +1,13 @@
+<html>
+{{#TABLE_NAME}}
+<table>
+  {{#TABLE_ITEM}}
+  <tr>
+    <td>{{NAME}}</td>
+    <td>{{SEX}}</td>
+    <td>{{EMAIL}}</td>
+  </tr>
+  {{/TABLE_ITEM}}
+</table>
+{{/TABLE_NAME}}
+</html>

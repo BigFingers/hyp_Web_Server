@@ -319,6 +319,21 @@ Main.s:
 .PHONY : Main.s
 
 # target to build an object file
+PhraseJson.o:
+	$(MAKE) -f CMakeFiles/WebServer.dir/build.make CMakeFiles/WebServer.dir/PhraseJson.o
+.PHONY : PhraseJson.o
+
+# target to preprocess a source file
+PhraseJson.i:
+	$(MAKE) -f CMakeFiles/WebServer.dir/build.make CMakeFiles/WebServer.dir/PhraseJson.i
+.PHONY : PhraseJson.i
+
+# target to generate assembly for a file
+PhraseJson.s:
+	$(MAKE) -f CMakeFiles/WebServer.dir/build.make CMakeFiles/WebServer.dir/PhraseJson.s
+.PHONY : PhraseJson.s
+
+# target to build an object file
 Server.o:
 	$(MAKE) -f CMakeFiles/WebServer.dir/build.make CMakeFiles/WebServer.dir/Server.o
 .PHONY : Server.o
@@ -426,6 +441,9 @@ help:
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
+	@echo "... PhraseJson.o"
+	@echo "... PhraseJson.i"
+	@echo "... PhraseJson.s"
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"

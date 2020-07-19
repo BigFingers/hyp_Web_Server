@@ -7,6 +7,7 @@
 #include <string>
 #include <unordered_map>
 #include "Timer.h"
+#include "PhraseJson.h"
 
 class EventLoop;
 class TimerNode;
@@ -127,6 +128,7 @@ private:
   ParseState hState_;
   bool keepAlive_;
   std::map<std::string, std::string> headers_;
+  std::string bodys_;
   std::weak_ptr<TimerNode> timer_;
 
   void handleRead();
