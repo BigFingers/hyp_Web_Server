@@ -143,7 +143,7 @@ CMakeFiles/WebServer.dir/Main.o: Timer.h
 CMakeFiles/WebServer.dir/Main.o: Util.h
 CMakeFiles/WebServer.dir/Main.o: noncopyable.h
 
-CMakeFiles/WebServer.dir/PhraseJson.o: PhraseJson.cc
+CMakeFiles/WebServer.dir/PhraseJson.o: PhraseJson.cpp
 CMakeFiles/WebServer.dir/PhraseJson.o: PhraseJson.h
 
 CMakeFiles/WebServer.dir/Server.o: Channel.h

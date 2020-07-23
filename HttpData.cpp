@@ -1096,7 +1096,6 @@ AnalysisState HttpData::analysisRequest()
       header += "Content-Length: " + to_string(body.length()) + "\r\n";
       header += "Server: hyp's Web Server\r\n";
       header += "\r\n";
-
       outBuffer_ += header;
       outBuffer_ += body;
       return ANALYSIS_SUCCESS;

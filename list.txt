@@ -1,0 +1,4 @@
+name    sex email
+zhangsan	male	zhangsan@baidu.com
+lisi	female	lisi@baidu.com
+wangwu	femal wangwu@baidu.com

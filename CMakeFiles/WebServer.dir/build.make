@@ -370,17 +370,17 @@ CMakeFiles/WebServer.dir/Main.o.provides.build: CMakeFiles/WebServer.dir/Main.o
 
 
 CMakeFiles/WebServer.dir/PhraseJson.o: CMakeFiles/WebServer.dir/flags.make
-CMakeFiles/WebServer.dir/PhraseJson.o: PhraseJson.cc
+CMakeFiles/WebServer.dir/PhraseJson.o: PhraseJson.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hyp/demo/hyp/WebServer/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/WebServer.dir/PhraseJson.o"
-	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WebServer.dir/PhraseJson.o -c /home/hyp/demo/hyp/WebServer/PhraseJson.cc
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WebServer.dir/PhraseJson.o -c /home/hyp/demo/hyp/WebServer/PhraseJson.cpp
 
 CMakeFiles/WebServer.dir/PhraseJson.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WebServer.dir/PhraseJson.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hyp/demo/hyp/WebServer/PhraseJson.cc > CMakeFiles/WebServer.dir/PhraseJson.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hyp/demo/hyp/WebServer/PhraseJson.cpp > CMakeFiles/WebServer.dir/PhraseJson.i
 
 CMakeFiles/WebServer.dir/PhraseJson.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WebServer.dir/PhraseJson.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hyp/demo/hyp/WebServer/PhraseJson.cc -o CMakeFiles/WebServer.dir/PhraseJson.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hyp/demo/hyp/WebServer/PhraseJson.cpp -o CMakeFiles/WebServer.dir/PhraseJson.s
 
 CMakeFiles/WebServer.dir/PhraseJson.o.requires:
 
